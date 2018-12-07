@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    //Объявление переменных для элементов активности
+    //Объявление переменных
     TextView textView;
     Button button;
     private boolean p;
