@@ -23,15 +23,22 @@ public class MainActivity extends AppCompatActivity {
     //Метод вызываемый при нажатии на кнопку "Передать" (задается в xml)
     public void sendMessage(View view) {
 
+        editText1 = findViewById(R.id.editText1);
+        String m = editText1.getText().toString();
+
         //Создание объекта НАМЕРЕНИЕ. В параметрах класс второй активности
         intent = new Intent(this, DisplayTextActivtiy.class);
-        editText1 = findViewById(R.id.editText1);
 
         //Параметры передаваемые в полях
-        intent.putExtra("message",editText1.getText().toString());
+        intent.putExtra("message1", m);
         intent.putExtra("message2", "My message2");
 
         //Запуск новой экземпляра второй активности
-        startActivity(intent);
+        startActivityForResult(intent, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        editText1.setText(data.getStringExtra("message1"));
     }
 }

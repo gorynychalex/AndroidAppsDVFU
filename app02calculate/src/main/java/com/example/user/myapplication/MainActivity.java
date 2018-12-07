@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         int x2 = Integer.parseInt(s2);
 
         // Вычисление результата (х1+х2) и приведение к строке
-        output.setText(String.valueOf(x1 + x2));
+        output.setText(x1 + x2);
     }
 
 }

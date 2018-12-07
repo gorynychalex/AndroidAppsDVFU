@@ -13,13 +13,18 @@
         android:layout_height="wrap_content"
         android:text="Вторая активность" />
 
-    <TextView
+
+    <EditText
         android:id="@+id/message"
-        android:textColor="#F00"
-        android:textSize="20sp"
+        android:hint="Здесь будет переданный текст"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="Здесь будет переданный текст" />
+        android:text="Передать обратно" />
 
 </LinearLayout>
